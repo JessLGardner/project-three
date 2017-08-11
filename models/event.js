@@ -1,6 +1,6 @@
 const Schema = require('../db/schema');
 const mongoose = require('mongoose');
 
-let Exhibit = Schema.Exhibit;
+let Event = Schema.Event;
 
-module.exports = Exhibit;
+module.exports = Event;

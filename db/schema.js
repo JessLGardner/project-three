@@ -4,18 +4,21 @@ const Schema = mongoose.Schema;
 mongoose.Promise = global.Promise;
 
 
-const ExhibitSchema = new Schema({
+const EventSchema = new Schema({
     id: String,
     name: String,
     description: String,
+    date: String,
     time: String,
-    place: String
+    place: String,
+    price: String,
+    link: String
 });
 
 const ItinerarySchema = new Schema({
     id: String,
     name: String,
-    exhibits: [ExhibitSchema]
+    events: [EventSchema]
 });
 
 const UserSchema = new Schema({
@@ -23,15 +26,16 @@ const UserSchema = new Schema({
     userName: String,
     email:  String,
     password: String,
+    avatar: String,
     itineraries: [ItinerarySchema]
 });
 
-const ExhibitModel = mongoose.model('Exhibit', ExhibitSchema);
+const EventModel = mongoose.model('Event', EventSchema);
 const ItineraryModel = mongoose.model('Itinerary', ItinerarySchema);
 const UserModel = mongoose.model('User', UserSchema);
 
 module.exports = {
-    Exhibit: ExhibitModel,
+    Event: EventModel,
     Itinerary: ItineraryModel,
     User: UserModel
 }
