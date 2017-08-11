@@ -12,10 +12,10 @@ mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI); //mongodb://localhost/fullstack-jeopardy
 const connection = mongoose.connection;
 connection.on('connected', () => {
-  console.log('Mongoose connection success');    
+    console.log('Mongoose connection success');    
 }); 
 connection.on('error', (err) => {  
-  console.log('Mongoose connection error: ' + err);
+    console.log('Mongoose connection error: ' + err);
 }); 
 
 
@@ -25,12 +25,12 @@ app.use(bodyParser.json());
 
 //CONTROLLERS
 app.use('/api/users', UsersController);
+app.use(express.static(__dirname + '/client/build/'));
 
 
-
-//INDEX ROUTE
+//ROUTE
 app.get('/', (req,res) => {
-  res.send('yo world')
+    res.sendFile(__dirname + '/client/build/index.html')
 })
 
 
@@ -40,5 +40,5 @@ app.get('/', (req,res) => {
 //PORT
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log('App listening on ' + PORT);
+    console.log('App listening on ' + PORT);
 })
