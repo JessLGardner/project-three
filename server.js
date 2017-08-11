@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 
 
 //CONTROLLERS
-app.use('/api/user', UsersController);
+app.use('/api/users', UsersController);
 
 
 
