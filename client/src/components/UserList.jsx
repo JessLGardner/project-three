@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import User from './User';
 
 
 class UserList extends Component {
@@ -7,10 +8,8 @@ class UserList extends Component {
         return (
             <div>
                 <div>
-                    UserList<br/>
-                    UserList<br/>
-                    UserList<br/>
-                    UserList<br/>
+                    <p>This is a user list!</p><br/>
+                    <User/>
                 </div>
                 <div>
                     <Link to="/">Home</Link>

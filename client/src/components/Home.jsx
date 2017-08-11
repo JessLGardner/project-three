@@ -6,6 +6,7 @@ class Home extends Component {
         return (
             <div>
                 HOME HOME HOME
+                <br/>
                 <div>
                     <Link to="/users">Users</Link>
                 </div>
