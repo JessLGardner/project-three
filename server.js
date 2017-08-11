@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const UsersController = require("./controllers/user");
 
 const app = express();
 
@@ -22,9 +23,12 @@ connection.on('error', (err) => {
 app.use(bodyParser.json());
 
 
+//CONTROLLERS
+app.use('/api/user', UsersController);
 
 
 
+//INDEX ROUTE
 app.get('/', (req,res) => {
   res.send('yo world')
 })
