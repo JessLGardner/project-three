@@ -5,7 +5,7 @@ class EventList extends Component {
     render() {
         return (
             <div>
-                <p>This is an event list!</p><br/>
+                <p>This is an event list!</p>
                 <Event/>
             </div>
         );

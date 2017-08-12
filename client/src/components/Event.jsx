@@ -4,9 +4,7 @@ class Event extends Component {
     render() {
         return (
             <div>
-                <br/>
                 <p>This is a single event!</p>
-                <br/>
             </div>
         );
     }

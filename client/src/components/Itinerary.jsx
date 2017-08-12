@@ -6,7 +6,7 @@ class Itinerary extends Component {
     render() {
         return (
             <div>
-                <p>This is a single itinerary!</p><br/>
+                <p>This is a single itinerary!</p>
                 <EventList/>
             </div>
         );

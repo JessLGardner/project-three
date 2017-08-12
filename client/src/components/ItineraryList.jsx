@@ -5,7 +5,7 @@ class ItineraryList extends Component {
     render() {
         return (
             <div>
-                <p>This is an intinerary list!</p><br/>
+                <p>This is an intinerary list!</p>
                 <Itinerary/>
             </div>
         );

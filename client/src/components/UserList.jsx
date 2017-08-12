@@ -8,11 +8,11 @@ class UserList extends Component {
         return (
             <div>
                 <div>
-                    <p>This is a user list!</p><br/>
-                    <User/>
+                    <Link to="/">Home</Link>
                 </div>
                 <div>
-                    <Link to="/">Home</Link>
+                    <p>This is a user list!</p><br/>
+                    <User/>
                 </div>
             </div>
         );
