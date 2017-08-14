@@ -2,7 +2,8 @@ require("dotenv").config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const UsersController = require("./controllers/user");
+const UsersController = require('./controllers/user');
+const ItinController = require('./controllers/itinerary');
 
 const app = express();
 
@@ -25,6 +26,8 @@ app.use(bodyParser.json());
 
 //CONTROLLERS
 app.use('/api/users', UsersController);
+app.use('/users/:userId/itinerary', ItinController)
+
 app.use(express.static(__dirname + '/client/build/'));
 
 
