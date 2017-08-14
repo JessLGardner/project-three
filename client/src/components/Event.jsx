@@ -4,7 +4,6 @@ class Event extends Component {
     render() {
         return (
             <div>
-                {/* <p>This is a single event!</p> */}
                 Event name: {this.props.name}<br/>
                 What: {this.props.description}<br/>
                 When: {this.props.date}<br/>

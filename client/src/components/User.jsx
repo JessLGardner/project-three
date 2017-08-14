@@ -15,18 +15,15 @@ class User extends Component {
                 Username: {this.props.userName}<br/>
                 email: {this.props.email}<br/>
                 <img src={this.props.avatar} alt="user avatar"/><br/>
-                Itineraries:<br/>
-
-                  <button onClick={this.props.toggleItin}>{this.props.itinView ? 'Hide Itinerary List' : 'See Itinerary List' }</button>
-                    {this.props.itinView ? ItineraryComponent : ""}  
+                <button onClick={this.props.toggleItin}>{this.props.itinView ? 'Hide Itineraries' : 'See Itineraries' }</button>
+                    {this.props.itinView ? ItineraryComponent : ''} <br/>  
+                create new itin 
                 <br/>
                 <br/>
+                
             </div>
         );
     }
 }
 
 export default User;   
-
-                 {/* {ItineraryComponent}<br/>    */}
-
