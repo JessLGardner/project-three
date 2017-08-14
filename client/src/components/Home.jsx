@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import {HomeStyle} from '../styles/User'
+
 
 class Home extends Component {
+
     render() {
+
         return (
-            <div>
-                HOME HOME HOME
+        <HomeStyle>
+
+            <br/>  
+            <p>HOME HOME HOME</p>
+            <br/>
+            <br/> 
                 <div>
-                    <Link to="/users">Users</Link>
+                    <p><Link to="/users">Enter</Link></p>
                 </div>
-            </div>
+        </HomeStyle>
         );
     }
 }
