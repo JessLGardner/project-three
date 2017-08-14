@@ -132,7 +132,7 @@ const sara = new User({
     userName: 'Sara',
     email:  'sara@gmail.com',
     password: 'sara',
-    avatar: 'http://placekitten.com/g/200/300',
+    avatar: 'http://placezombie.com/200x300',
     itineraries: [forTheKids, forSara]
 })
 
@@ -140,7 +140,7 @@ const gordon = new User({
     userName: 'Gordon',
     email:  'gordon@gmail.com',
     password: 'gordon',
-    avatar: 'http://placezombie.com/300x200',
+    avatar: 'http://placezombie.com/200x300',
     itineraries: [history, design]
 })
 
@@ -148,7 +148,7 @@ const bailey = new User({
     userName: 'Bailey',
     email:  'bailey@gmail.com',
     password: 'bailey',
-    avatar: 'https://placebear.com/200/300',
+    avatar: 'http://placezombie.com/200x300',
     itineraries: [drunky]
 })
 
