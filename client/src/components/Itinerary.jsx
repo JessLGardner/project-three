@@ -6,16 +6,6 @@ import Event from './Event';
 class Itinerary extends Component {
 
 
-
-    // componentWillMount(){
-    //     console.log(this.props)
-    //     const userId =  this.props.match.params.userId
-    //     const itineraryId =  this.props.match.params.itineraryId
-    //     axios.get(`/api/users/${userId}/itinerary/${itineraryId}`).then(res => {
-    //         this.setState({user: res.data})
-    //     });
-    // }
-
     render() {
 
         const EventComponent = this.props.events.map((event, i)=>{
