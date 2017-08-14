@@ -18,7 +18,7 @@ class Itinerary extends Component {
             <div>
                 Itinerary Name: {this.props.name}<br/>
                 Events:<br/>
-                {EventComponent} 
+                 {EventComponent}  
 
                 delete itin<br/>
                 edit itin<br/>

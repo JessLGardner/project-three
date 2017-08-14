@@ -13,7 +13,13 @@ router.get('/', (req, res)=>{
         })
 })
 
-
+// router.get('/:itineraryId', (req, res)=>{
+//     const userIdToFind = req.params.userId;
+//     console.log("hit the itin get")
+//     User.findById(userIdToFind)
+//         .then((user)=>{
+//         res.json(user)
+        
 
 
 
