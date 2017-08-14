@@ -5,12 +5,12 @@ class Event extends Component {
         return (
             <div>
                 {/* <p>This is a single event!</p> */}
-                {this.props.name}<br/>
-                {this.props.description}<br/>
-                {this.props.date}<br/>
-                {this.props.time}<br/>
-                {this.props.place}<br/>
-                {this.props.price}<br/>
+                Event name: {this.props.name}<br/>
+                What: {this.props.description}<br/>
+                When: {this.props.date}<br/>
+                When: {this.props.time}<br/>
+                Where: {this.props.place}<br/>
+                How much: {this.props.price}<br/>
                 <a href={this.props.link}>link</a><br/>
                 <br/>
             </div>

@@ -43,8 +43,8 @@ class UserList extends Component {
                 <div>
                     <br/>
                     <br/>
-                    <p>This is a user list!</p><br/>
-                          {UserComponent}      
+                    {UserComponent}  
+                    <br/>    
                 </div>
             </div>
         );

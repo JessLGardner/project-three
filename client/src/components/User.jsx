@@ -13,9 +13,10 @@ class User extends Component {
         return (
             <div>
                 {/* <p>this is a single user</p> */}
-                {this.props.userName}<br/>
-                {this.props.email}<br/>
-                <img src={this.props.avatar}/><br/>
+                Username: {this.props.userName}<br/>
+                email: {this.props.email}<br/>
+                <img src={this.props.avatar} alt="user avatar"/><br/>
+                Itineraries:<br/>
                 {ItineraryComponent}<br/>  
                 <br/>
             </div>

@@ -14,7 +14,8 @@ class Itinerary extends Component {
         return (
             <div>
                 {/* <p>This is a single itinerary!</p> */}
-                {this.props.name}
+                Itinerary Name: {this.props.name}<br/>
+                Events:<br/>
                 {EventComponent}
             </div>
         );
