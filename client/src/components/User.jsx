@@ -12,16 +12,18 @@ class User extends Component {
 
         return (
             <div>
-                {/* <p>this is a single user</p> */}
                 Username: {this.props.userName}<br/>
                 email: {this.props.email}<br/>
                 <img src={this.props.avatar} alt="user avatar"/><br/>
-                Itineraries:<br/>
-                {ItineraryComponent}<br/>  
+                <button onClick={this.props.toggleItin}>{this.props.itinView ? 'Hide Itineraries' : 'See Itineraries' }</button>
+                    {this.props.itinView ? ItineraryComponent : ''} <br/>  
+                create new itin 
                 <br/>
+                <br/>
+                
             </div>
         );
     }
 }
 
-export default User;
+export default User;   

@@ -18,9 +18,10 @@ router.get('/', (req, res)=>{
 // });
 
 router.get('/:id', (req, res)=>{
-    User.findById(req.params.id).then((users)=>{
-        res.json(users);
-    })
+    User.findById(req.params.id)
+        .then((users)=>{
+            res.json(users);
+        })
 });
 
 router.put("/:id", (req, res) => {
@@ -28,7 +29,6 @@ router.put("/:id", (req, res) => {
         {
             userName: req.body.userName,
             email: req.body.email,
-            password: req.body.password,
             avatar: req.body.avatar
         })
         .then((user) =>{
@@ -36,23 +36,6 @@ router.put("/:id", (req, res) => {
         })
 });
 
-// router.post("/", (req, res) => {
-//   const newGame = new Game();
-//   newGame.user = req.body.user;
-//   newGame.points = 0;
-//   newGame.categories = []
-
-//   Category.find().then((categories) => {
-//     for (var i = 0; i < 6; i ++){
-//       const randomNumber = Math.floor(Math.random() * categories.length);
-//       const randomCategory = categories[randomNumber];
-//       newGame.categories.push(randomCategory);
-//     }
-//     return newGame.save();
-//   }).then((game) => {
-//     return res.json(game);
-//   });
-// });
 
 
 module.exports = router;

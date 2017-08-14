@@ -10,30 +10,29 @@ class UserList extends Component {
         super();
         this.state = {
             users: [],
-            // user: {
-            //     userName: '',
-            //     email: '',
-            //     password: '',
-            //     avatar: '',
-            //     itineraries: []
-            // }
+            itinView: false
         }
     }
 
     componentWillMount(){
         axios.get('/api/users').then(res => {
             this.setState({users: res.data})
-            console.log(this.state.users);
         });
     }
 
+    _toggleItinerary = () => {
+        const itinView = !this.state.itinView;
+        this.setState({itinView});
+    };
+
     render() {
+    const toggleItin = this._toggleItinerary;
 
     const UserComponent = this.state.users.map((user, i)=>{
                         console.log(user);
-                        return <User {...user} key={i}/>
+                        return <User {...user} itinView={this.state.itinView} key={i} toggleItin={toggleItin}/>
                     })
-        
+
         return (
             <div>
                 <br/>
@@ -51,8 +50,5 @@ class UserList extends Component {
     }
 }
 
-// UserList.defaultState = {
-//         users: []
-//     }
-
 export default UserList;
+

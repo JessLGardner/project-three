@@ -13,10 +13,13 @@ class Itinerary extends Component {
 
         return (
             <div>
-                {/* <p>This is a single itinerary!</p> */}
                 Itinerary Name: {this.props.name}<br/>
                 Events:<br/>
-                {EventComponent}
+                {EventComponent} 
+
+                delete itin<br/>
+                edit itin<br/>
+                <br/>
             </div>
         );
     }
