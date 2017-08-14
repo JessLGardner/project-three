@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 
 //CONTROLLERS
 app.use('/api/users', UsersController);
-app.use('/users/:userId/itinerary', ItinController)
+app.use('/api/users/:userId/itinerary', ItinController)
 
 app.use(express.static(__dirname + '/client/build/'));
 
