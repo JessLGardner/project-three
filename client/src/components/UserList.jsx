@@ -29,7 +29,7 @@ class UserList extends Component {
     const toggleItin = this._toggleItinerary;
 
     const UserComponent = this.state.users.map((user, i)=>{
-                        console.log(user);
+                        // console.log(user);
                         return <User {...user} itinView={this.state.itinView} key={i} toggleItin={toggleItin}/>
                     })
 

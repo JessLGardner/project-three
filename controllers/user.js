@@ -3,8 +3,8 @@ const User  = require('../models/user');
 const router = express.Router();
 
 router.get('/', (req, res)=>{
-    User.find().then(users => {
-        res.json(users);
+    User.find().then(user => {
+        res.json(user);
     })
 });
 
@@ -19,22 +19,22 @@ router.get('/', (req, res)=>{
 
 router.get('/:id', (req, res)=>{
     User.findById(req.params.id)
-        .then((users)=>{
-            res.json(users);
-        })
-});
-
-router.put("/:id", (req, res) => {
-    User.findByIdAndUpdate(req.params.id,
-        {
-            userName: req.body.userName,
-            email: req.body.email,
-            avatar: req.body.avatar
-        })
-        .then((user) =>{
+        .then((user)=>{
             res.json(user);
         })
 });
+
+// router.put("/:id", (req, res) => {
+//     User.findByIdAndUpdate(req.params.id,
+//         {
+//             userName: req.body.userName,
+//             email: req.body.email,
+//             avatar: req.body.avatar
+//         })
+//         .then((user) =>{
+//             res.json(user);
+//         })
+// });
 
 
 
