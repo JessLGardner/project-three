@@ -10,7 +10,7 @@ router.get('/', (req, res)=>{
         .then((user)=>{
             console.log(`grabbing ${user.userName}'s userID`)
 
-        Itinerary.find(()=>{
+        user.itineraries.find(()=>{
                 console.log(`seeing list of ${user.userName}'s itineraries`)
                 res.json(user)
             })
@@ -20,16 +20,18 @@ router.get('/', (req, res)=>{
         
 router.get('/:id', (req, res)=>{
     const userIdToFind = req.params.userId;
+    const itinIdToFind = req.params.id;
+
     User.findById(userIdToFind)
         .then((user)=>{
             console.log(`grabbing ${user.userName}'s userID`)
-
-        Itinerary.findById()
-            .then((itinerary)=>{
-                console.log(`seeing ONE of ${user.userName}'s itineraries`)
-                res.json(user)
+            const itin = user.itineraries.find(itinerary => {
+                let idString = itinerary._id.toString()
+                return idString === itinIdToFind;
             })
-        })       
+            res.json(itin)
+        })
+    
 })
 
 

@@ -13,7 +13,7 @@ class App extends Component {
           <Route exact path="/" component={Home}/>
           <Route exact path="/users" component={UserList}/>
           <Route exact path="/users/:userId/itinerary" component={ItineraryList}/>
-          {/* <Route exact path="/users/:userId/itinerary/:itineraryId" component={Itinerary}/> */}
+           <Route exact path="/users/:userId/itinerary/:itineraryId" component={Itinerary}/> 
 
           <br/>
         </div>
