@@ -10,8 +10,7 @@ router.get('/', (req, res)=>{
         .then((user)=>{
             console.log(`grabbing ${user.userName}'s userID`)
 
-        Itinerary.find()
-            .then((itinerary)=>{
+        Itinerary.find(()=>{
                 console.log(`seeing list of ${user.userName}'s itineraries`)
                 res.json(user)
             })
