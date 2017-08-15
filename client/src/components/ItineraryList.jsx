@@ -28,13 +28,18 @@ class ItineraryList extends Component {
     const ItineraryComponent = this.state.user.itineraries.map((itinerary, i)=>{
         // return <Itinerary {...itinerary} key={i}/>                
         console.log(itinerary._id)
-        return <Link to={{pathname:`/users/${this.props._id}/itinerary/${itinerary._id}`}}>See what's happening!</Link>
-        })
+        return <Link to={{
+                    pathname:`/users/${this.props._id}/itinerary/${itinerary._id}`}}>
+                    {`see ${itinerary.name} itinerary`}
+                </Link>})
 
         return (
             <div>
-                 {ItineraryComponent} 
-                 create new itin
+                <br/>
+                {ItineraryComponent}
+                <br/>
+                <br/>
+                (create new itin from here)
             </div>
         );
     }

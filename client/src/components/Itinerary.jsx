@@ -6,7 +6,22 @@ import Event from './Event';
 class Itinerary extends Component {
     //do an axios call after component wil mount
     //make sure you're grabbing itinerary not user
-    
+        constructor(){
+        super();
+        this.state = {
+            itinerary: {
+                events: []
+            }
+        }
+    }
+
+    componentWillMount(){
+        const itineraryId =  this.props.match.params.interaryId
+        console.log("ITIN ID:", itineraryId );
+        // axios.get(`/api/users/${userId}/itinerary`).then(res => {
+        //     this.setState({user: res.data})
+        // });
+    }
 
     render() {
 

@@ -10,8 +10,9 @@ class UserInfo extends Component {
             <div>
                 email: {this.props.email}<br/>
                 <Link to={{
-                    pathname:`/users/${this.props._id}/itinerary`,
-                }}>See Itineraries</Link>
+                    pathname:`/users/${this.props._id}/itinerary`}}>
+                    <button>{`view ${this.props.userName}'s itineraries`}</button>
+                </Link>
             </div>
         );
     }
