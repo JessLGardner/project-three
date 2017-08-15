@@ -17,12 +17,12 @@ router.get('/', (req, res)=>{
 //         newUser.itineraries = [];
 // });
 
-// router.get('/:id', (req, res)=>{
-//     User.findById(req.params.id)
-//         .then((users)=>{
-//             res.json(users);
-//         })
-// });
+router.get('/:id', (req, res)=>{
+    User.findById(req.params.id)
+        .then((user)=>{
+            res.json(user);
+        })
+});
 
 // router.put("/:id", (req, res) => {
 //     User.findByIdAndUpdate(req.params.id,

@@ -16,16 +16,17 @@ class Itinerary extends Component {
     }
 
     componentWillMount(){
+        const userId =  this.props.match.params.userId
         const itineraryId =  this.props.match.params.interaryId
         console.log("ITIN ID:", itineraryId );
-        // axios.get(`/api/users/${userId}/itinerary`).then(res => {
-        //     this.setState({user: res.data})
-        // });
+        axios.get(`/api/users/${userId}/itinerary`).then(res => {
+            this.setState({user: res.data})
+        });
     }
 
     render() {
 
-        const EventComponent = this.props.events.map((event, i)=>{
+        const EventComponent = this.props.user.itineraries.events.map((event, i)=>{
                         console.log(event);
                         return <Event {...event} key={i}/>
                     })
