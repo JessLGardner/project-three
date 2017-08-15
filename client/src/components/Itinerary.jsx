@@ -4,7 +4,9 @@ import Event from './Event';
 
 
 class Itinerary extends Component {
-
+    //do an axios call after component wil mount
+    //make sure you're grabbing itinerary not user
+    
 
     render() {
 
