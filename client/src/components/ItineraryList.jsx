@@ -24,12 +24,12 @@ class ItineraryList extends Component {
     }
 
     render() {
-
+    const userId =  this.props.match.params.userId
     const ItineraryComponent = this.state.user.itineraries.map((itinerary, i)=>{
         // return <Itinerary {...itinerary} key={i}/>                
         console.log(itinerary._id)
         return <Link to={{
-                    pathname:`/users/${this.props._id}/itinerary/${itinerary._id}`}}>
+                    pathname:`/users/${userId}/itinerary/${itinerary._id}`}}>
                     {`see ${itinerary.name} itinerary`}
                 </Link>})
 

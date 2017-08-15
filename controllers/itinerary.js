@@ -6,14 +6,13 @@ const router = express.Router({mergeParams: true});
 
 router.get('/', (req, res)=>{
     const userIdToFind = req.params.userId;
-    // console.log("hit the get")
     User.findById(userIdToFind)
         .then((user)=>{
-            console.log(`hitting ${user.userName}'s userID itin`)
+            console.log(`grabbing ${user.userName}'s userID`)
 
         Itinerary.find()
             .then((itinerary)=>{
-                console.log(`${user.userName}'s itineraries`)
+                console.log(`seeing list of ${user.userName}'s itineraries`)
                 res.json(user)
             })
         })       
@@ -33,7 +32,19 @@ router.get('/', (req, res)=>{
 //         })
 // });
         
+router.get('/:itineraryid', (req, res)=>{
+    const userIdToFind = req.params.userId;
+    User.findById(userIdToFind)
+        .then((user)=>{
+            console.log(`grabbing ${user.userName}'s userID`)
 
+        Itinerary.findById()
+            .then((itinerary)=>{
+                console.log(`seeing one of ${user.userName}'s itineraries`)
+                res.json(user)
+            })
+        })       
+})
 
 
 
