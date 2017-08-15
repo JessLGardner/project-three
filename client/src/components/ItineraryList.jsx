@@ -20,6 +20,7 @@ class ItineraryList extends Component {
         console.log("USER ID:", userId );
         axios.get(`/api/users/${userId}/itinerary`).then(res => {
             this.setState({user: res.data})
+            
         });
     }
 
@@ -27,11 +28,12 @@ class ItineraryList extends Component {
     const userId =  this.props.match.params.userId
     const ItineraryComponent = this.state.user.itineraries.map((itinerary, i)=>{
         // return <Itinerary {...itinerary} key={i}/>                
-        console.log(itinerary._id)
-        return <Link to={{
+        console.log(`itinerary id ${JSON.stringify(itinerary)}`)
+                    return <Link to={{
                     pathname:`/users/${userId}/itinerary/${itinerary._id}`}}>
                     {`see ${itinerary.name} itinerary`}
-                </Link>})
+                </Link>
+})
 
         return (
             <div>

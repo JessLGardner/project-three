@@ -26,7 +26,7 @@ class Itinerary extends Component {
 
     render() {
 
-        const EventComponent = this.props.events.map((event, i)=>{
+        const EventComponent = this.props.user.itineraries.events.map((event, i)=>{
                         console.log(event);
                         return <Event {...event} key={i}/>
                     })

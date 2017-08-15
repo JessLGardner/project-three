@@ -18,21 +18,8 @@ router.get('/', (req, res)=>{
         })       
 })
 
-// router.get('/:itineraryId', (req, res)=>{
-//     const userIdToFind = req.params.userId;
-//     console.log("hit the itin get")
-//     User.findById(userIdToFind)
-//         .then((user)=>{
-//         res.json(user)
-
-// router.get('/:id', (req, res)=>{
-//     User.findById(req.params.id)
-//         .then((users)=>{
-//             res.json(users);
-//         })
-// });
         
-router.get('/:itineraryid', (req, res)=>{
+router.get('/:id', (req, res)=>{
     const userIdToFind = req.params.userId;
     User.findById(userIdToFind)
         .then((user)=>{
@@ -40,7 +27,7 @@ router.get('/:itineraryid', (req, res)=>{
 
         Itinerary.findById()
             .then((itinerary)=>{
-                console.log(`seeing one of ${user.userName}'s itineraries`)
+                console.log(`seeing ONE of ${user.userName}'s itineraries`)
                 res.json(user)
             })
         })       
