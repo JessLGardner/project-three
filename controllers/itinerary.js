@@ -9,8 +9,14 @@ router.get('/', (req, res)=>{
     // console.log("hit the get")
     User.findById(userIdToFind)
         .then((user)=>{
-        res.json(user)
-        })
+            console.log(`hitting ${user.userName}'s userID itin`)
+
+        Itinerary.find()
+            .then((itinerary)=>{
+                console.log(`${user.userName}'s itineraries`)
+                res.json(user)
+            })
+        })       
 })
 
 // router.get('/:itineraryId', (req, res)=>{
@@ -19,6 +25,13 @@ router.get('/', (req, res)=>{
 //     User.findById(userIdToFind)
 //         .then((user)=>{
 //         res.json(user)
+
+// router.get('/:id', (req, res)=>{
+//     User.findById(req.params.id)
+//         .then((users)=>{
+//             res.json(users);
+//         })
+// });
         
 
 
