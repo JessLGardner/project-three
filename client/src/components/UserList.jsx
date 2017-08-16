@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import {UserListStyle} from '../styles/Styles';
+import {FlexStyle} from '../styles/Styles';
+import {NavBarStyle2} from '../styles/Styles';
 import User from './User';
 import axios from 'axios';
 
@@ -35,16 +38,21 @@ class UserList extends Component {
 
         return (
             <div>
-                <br/>
-                <div>
-                    <Link to="/">Home</Link>
-                </div>
-                <div>
-                    <br/>
-                    <br/>
-                    {UserComponent}  
-                    <br/>    
-                </div>
+                <NavBarStyle2>
+                    <div>
+                        <Link to="/"><small>HOME</small></Link>
+                    </div>
+                </NavBarStyle2>
+            <FlexStyle>
+                <UserListStyle>
+                    <div>
+                        <br/>
+                        <br/>
+                        {UserComponent}  
+                        <br/>    
+                    </div>
+                </UserListStyle>
+            </FlexStyle>
             </div>
         );
     }

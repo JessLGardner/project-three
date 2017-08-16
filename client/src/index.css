@@ -2,4 +2,30 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #dddbdb;
+}
+
+.TextStyle {
+        text-align: center;
+        color: #3d3d3d;
+        font-family: 'Montserrat', sans-serif;
+}
+
+.TextStyle2 {
+        text-align: center;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+}
+
+.i {
+  font-weight: 200;
+  font-size: 98px;
+
+}
+
+.b {
+  font-weight: 900;
+  font-size: 104px;
+
 }

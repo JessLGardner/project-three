@@ -3,6 +3,10 @@ import {Link} from 'react-router-dom';
 import UserInfo from './UserInfo';
 import axios from 'axios';
 import ItineraryList from './Itinerary';
+import {Button2} from '../styles/Styles';
+import {TextStyle} from '../styles/Styles';
+
+
 
 class User extends Component {
 
@@ -24,10 +28,9 @@ class User extends Component {
 
         return (
             <div>
-                Username: {this.props.userName}<br/>
-                email: {this.props.email}<br/>
+                <TextStyle>{this.props.userName}</TextStyle>
                 <img src={this.props.avatar} alt="user avatar"/><br/>
-                <button onClick={this.props.toggleItin}>{this.props.itinView ? 'HIDE USER INFO' : 'SEE USER INFO' }</button>
+                <Button2 onClick={this.props.toggleItin}>{this.props.itinView ? 'HIDE USER INFO' : 'SEE USER INFO' }</Button2>
                     {this.props.itinView ? <UserInfo {...this.props}/> : ''} <br/>  
                 <br/>
                 <br/>
