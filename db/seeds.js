@@ -20,7 +20,7 @@ const labyrinth = new Event({
     time: 'Tuesday-Friday: 9am-5pm, Weekends: 12pm-5pm',
     place: 'Center for Puppetry Arts',
     price: 'free with museum admission ($12.50)',
-    link: 'http://www.puppet.org/programs/museum/special-exhibits-events/'
+    link: 'http://www.puppet.org/buy-tickets/2017-18/jim-hensons-labyrinth-journey-to-goblin-city/'
 })
 
 const wildwood = new Event({
@@ -110,7 +110,7 @@ const forTheKids = new Itinerary({
 
 const forSara = new Itinerary({
     name: 'For Sara',
-    events: [buildVibe, cocktailGarden]
+    events: [cocktailGarden, buildVibe]
 })
 
 const design = new Itinerary({

@@ -8,14 +8,6 @@ router.get('/', (req, res)=>{
     })
 });
 
-// router.post("/", (req, res) => {
-//     const newUser = new User();
-//         newUser.userName = req.body.userName;
-//         newUser.email = req.body.email;
-//         newUser.password = req.body.password
-//         newUser.avatar =req.body.avatar;
-//         newUser.itineraries = [];
-// });
 
 router.get('/:id', (req, res)=>{
     User.findById(req.params.id)
@@ -24,17 +16,6 @@ router.get('/:id', (req, res)=>{
         })
 });
 
-// router.put("/:id", (req, res) => {
-//     User.findByIdAndUpdate(req.params.id,
-//         {
-//             userName: req.body.userName,
-//             email: req.body.email,
-//             avatar: req.body.avatar
-//         })
-//         .then((user) =>{
-//             res.json(user);
-//         })
-// });
 
 
 

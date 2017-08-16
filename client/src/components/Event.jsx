@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
+import {EventListStyle} from '../styles/Styles';
+
 
 class Event extends Component {
     render() {
         return (
-            <div>
-                Event name: {this.props.name}<br/>
-                What: {this.props.description}<br/>
-                When: {this.props.date}<br/>
-                When: {this.props.time}<br/>
-                Where: {this.props.place}<br/>
-                How much: {this.props.price}<br/>
-                <a href={this.props.link}>link</a><br/>
+            <EventListStyle>
+                <h1>{this.props.name}</h1>
+                <p>{this.props.description}</p><br/>
+                <small>DATE:</small>  {this.props.date}<br/>
+                <small>TIME:</small>  {this.props.time}<br/>
+                <small>PLACE:</small>  {this.props.place}<br/>
+                <small>PRICE:</small>  {this.props.price}<br/>
+                <a href={this.props.link}>MORE INFO</a><br/>
                 <br/>
-            </div>
+            </EventListStyle>
         );
     }
 }
