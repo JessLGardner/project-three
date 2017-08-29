@@ -18,7 +18,9 @@ class UserList extends Component {
     }
 
     componentWillMount(){
+        console.log('test this')
         axios.get('/api/users').then(res => {
+        
             this.setState({users: res.data})
         });
     }

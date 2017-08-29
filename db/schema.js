@@ -24,8 +24,9 @@ const ItinerarySchema = new Schema({
 const UserSchema = new Schema({
     id: String,
     userName: String,
+    firstName: String,
+    lastName: String,
     email:  String,
-    password: String,
     avatar: String,
     itineraries: [ItinerarySchema]
 });

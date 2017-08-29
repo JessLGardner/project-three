@@ -130,25 +130,28 @@ const drunky = new Itinerary({
 
 const sara = new User({
     userName: 'Sara',
+    firstName: 'Sara',
+    lastName: 'Robel',
     email:  'sara@gmail.com',
-    password: 'sara',
-    avatar: 'http://placeskull.com/150/150',
+    avatar: 'http://i.imgur.com/kSFblTZ.jpg',
     itineraries: [forTheKids, forSara]
 })
 
 const gordon = new User({
     userName: 'Gordon',
+    firstName: 'Gordon',
+    lastName: 'Connor',
     email:  'gordon@gmail.com',
-    password: 'gordon',
-    avatar: 'http://placeskull.com/150/150',
+    avatar: 'http://i.imgur.com/FDoQ8Xl.jpg',
     itineraries: [history, design]
 })
 
 const bailey = new User({
     userName: 'Bailey',
+    firstName: 'Bailey',
+    lastName: 'Becker',
     email:  'bailey@gmail.com',
-    password: 'bailey',
-    avatar: 'http://placeskull.com/150/150',
+    avatar: 'http://i.imgur.com/TAoI7cG.jpg',
     itineraries: [drunky]
 })
 
