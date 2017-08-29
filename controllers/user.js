@@ -15,13 +15,6 @@ router.get('/', (req, res)=>{
     });
 });
 
-//==================================
-//       USER GET NEW ROUTE
-//==================================
-// router.get('/new', (req, res)=>{
-//     res.send('hit new route');
-//     console.log('new user form');
-// });
 
 
 //==================================
@@ -51,15 +44,15 @@ router.post('/', (req, res) => {
 //==================================
 //          USER SHOW ROUTE
 //==================================
-router.get('/:id', (req, res)=>{
-    User.findById(req.params.id).then((user)=>{
-            res.json(user);
-    })
-    .catch((err) => {
-        console.log('Error retrieving users from database!');
-        console.log(err);
-    });
-});
+// router.get('/:id', (req, res)=>{
+//     User.findById(req.params.id).then((user)=>{
+//             res.json(user);
+//     })
+//     .catch((err) => {
+//         console.log('Error retrieving users from database!');
+//         console.log(err);
+//     });
+// });
 
 //==================================
 //       USER UPDATE PUT ROUTE
@@ -88,32 +81,18 @@ router.get('/:id', (req, res)=>{
 
 
 
-//==================================
-//        USER EDIT GET ROUTE
-//==================================
-// router.get('/:id/edit', (req, res) => {
-//     const userIdToFind = req.params.id;
-
-//     User.findById(userIdToFind).then((user) => {
-//         res.json(user);
-//     })
-//     .catch((err) => {
-//         console.log(`Error rendering edit form for user with ID of ${userIdToFind}`);
-//         console.log(err);
-//     });
-// });
 
 //==================================
 //         USER DELETE ROUTE
 //==================================
-// router.get('/:id/delete', (req, res) => {
-//     const userIdToDelete = req.params.id;
+router.get('/:id/delete', (req, res) => {
+    const userIdToDelete = req.params.id;
 
-//     User.findByIdAndRemove(userIdToDelete).then(() => {
-//         console.log(`Successfully deleted user with ID ${userIdToDelete}!`);
-//         res.redirect('/users');
-//     });
-// });
+    User.findByIdAndRemove(userIdToDelete).then(() => {
+        console.log(`Successfully deleted user with ID ${userIdToDelete}!`);
+        res.redirect('/users');
+    });
+});
 
 
 module.exports = router;

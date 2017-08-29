@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import Itinerary from './Itinerary';
+import {Button2} from '../styles/Styles';
+
 
 
 class UserInfo extends Component {
@@ -13,10 +15,13 @@ class UserInfo extends Component {
                 <p><small>FIRST NAME:</small> {this.props.firstName}</p>
                 <p><small>LAST NAME:</small> {this.props.lastName}</p>
 
-                <Link to={{
+                <div><Link to="/"><Button2>edit</Button2></Link></div>
+                <div><Link to="/"><Button2>delete</Button2></Link></div>
+
+                <div><Link to={{
                     pathname:`/users/${this.props._id}/itinerary`}}>
                     {`see ${this.props.userName}'s itineraries`}
-                </Link>
+                </Link></div>
             </div>
         );
     }
