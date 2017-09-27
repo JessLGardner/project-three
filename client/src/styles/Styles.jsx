@@ -76,8 +76,9 @@ export const Button = styled.button`
 export const Button2 = styled.button`
         padding: 10px;
         border-radius: 4px;
-        background-color: #23b6c4;
-        color: #f4f4f4;
+        background-color: #f4f4f4;
+        
+        color: #23b6c4;
         border: none;
         text-align: center;
   `;
@@ -92,7 +93,7 @@ export const FlexStyle = styled.div`
 
 export const UserListStyle = styled.div`
     text-align: left;
-    margin: auto;
+    margin: 10px auto;
     padding: 30px;
     display: flex;
     flex-direction: row;
@@ -106,9 +107,22 @@ export const UserListStyle = styled.div`
     }
 `;
 
+export const UserStyle = styled.div`
+    text-align: left;
+    margin: 30px auto;
+    padding: 0px 30px;
+    background-color: #23b6c4;    
+    a {
+        color: #f4f4f4;
+        font-size: 20px;
+        text-decoration: none;
+    }
+`;
+
 export const ItineraryListStyle = styled.div`
     text-align: left;
-    margin-right: 600px;
+    max-width: 35%;
+    min-width: 20%;
     margin-left: 75px;
     padding-left: 50px;
     padding-right: 100px;
@@ -130,7 +144,9 @@ export const ItineraryListStyle = styled.div`
 
 export const EventListStyle = styled.div`
     text-align: left;
-    margin-right: 400px;
+    max-width: 35%;
+    min-width: 20%;
+
     margin-left: 75px;
     padding-left: 50px;
     padding-right: 100px;

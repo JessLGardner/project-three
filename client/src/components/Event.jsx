@@ -6,7 +6,8 @@ class Event extends Component {
     render() {
         return (
             <EventListStyle>
-                <h1>{this.props.name}</h1>
+                <h2>{this.props.name}</h2>
+                    <hr/>
                 <p>{this.props.description}</p><br/>
                 <small>DATE:</small>  {this.props.date}<br/>
                 <small>TIME:</small>  {this.props.time}<br/>

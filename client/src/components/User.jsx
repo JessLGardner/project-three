@@ -5,6 +5,7 @@ import axios from 'axios';
 import ItineraryList from './Itinerary';
 import {Button2} from '../styles/Styles';
 import {TextStyle} from '../styles/Styles';
+import {UserStyle} from '../styles/Styles';
 
 
 
@@ -27,7 +28,8 @@ class User extends Component {
     render() {
 
         return (
-            <div>
+            <UserStyle>
+                <br/>
                 <TextStyle>{this.props.userName}</TextStyle>
                 <img src={this.props.avatar} alt="user avatar"/><br/>
                 <Button2 onClick={this.props.toggleItin}>{this.props.itinView ? 'HIDE USER INFO' : 'SEE USER INFO' }</Button2>
@@ -35,7 +37,7 @@ class User extends Component {
                 <br/>
                 <br/>
                 
-            </div>
+            </UserStyle>
         );
     }
 }

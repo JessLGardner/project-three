@@ -16,6 +16,7 @@ class App extends Component {
                     <Route exact path="/users/:userId/itinerary" component={ItineraryList}/>
                     <Route exact path="/users/:userId/itinerary/:itineraryId" component={Itinerary}/> 
                     <FooterStyle>
+                        <small>© 2017 Jess Gardner</small>
                     </FooterStyle>
                 </div>
             </Router>
